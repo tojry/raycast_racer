@@ -9,7 +9,11 @@ https://github.com/joffroy8u/projet_joffroy_zouari
 ***
 
 # Compilation :
+* Windows :  
+Renommer le fichier **Makefile_win** en **Makefile** en remplacant le fichier **Makefile** déjà existant  
+**mingw32-make** depuis le dossier du projet
 
+* Linux :  
 **make** depuis le dossier du projet.
 
 Exécution : **./main**
@@ -51,3 +55,6 @@ Symboles acceptés :
 * **espace** : Route
 
 **Important** : la route doit toujours faire exactement **2 cases** de largeur. (les obstacles peuvent circuler sur les 2 voies).
+
+![Menu](title.png)
+![Jeu](race.png)

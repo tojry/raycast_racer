@@ -1,10 +1,10 @@
-# projet_joffroy_zouari
+# raycast_racer
 
-**Projet de Programmation Avancée**
+**Projet universitaire Semestre 3**
 
-**Théo JOFFROY – Sami ZOUARI**
+**Théo JOFFROY**
 
-https://github.com/joffroy8u/projet_joffroy_zouari
+https://github.com/tojry/raycast_racer
 
 ***
 

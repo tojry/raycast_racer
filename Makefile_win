@@ -1,0 +1,33 @@
+#Makefile pour windows
+
+CFLAGS =  -O3 -Dmain=SDL_main
+LDFLAGS = -lm -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image
+SDL2_INCLUDE_DIR = D:\Programmes\SDL2-2.0.14\i686-w64-mingw32\include
+SDL2_LIBRARIES_DIR = D:\Programmes\SDL2-2.0.14\i686-w64-mingw32\lib
+
+INC = renderer.h player.h map.h vector2.h building.h SDL_utils.h sprite.h obstacle.h roads.h game.h sort.h gui.h
+SRC = main.c renderer.c player.c map.c vector2.c building.c SDL_utils.c sprite.c obstacle.c roads.c game.c sort.c gui.c
+OBJ = $(SRC:%.c=%.o)
+
+INCTEST = 
+SRCTEST = 
+OBJTEST = $(SRCTEST:%.c=%.o)
+
+PROG = main.exe
+
+%.o: %.c $(INC)
+	gcc $(CFLAGS) -c $<  -I $(SDL2_INCLUDE_DIR) -o $@
+
+$(PROG): $(OBJ)
+	gcc $(CFLAGS) $(OBJ) $(LDFLAGS) -o $@ -L $(SDL2_LIBRARIES_DIR)
+
+tests: $(OBJTEST)
+	gcc $(CFLAGS) $(OBJTEST) $(LDFLAGS) -o $@ -L $(SDL2_LIBRARIES_DIR)
+
+doc: $(PROG)
+	doxygen $(PROG)
+
+.PHONY: clean
+clean:
+	del /f /q *.o *~ $(PROG)
+	rd /s /q latex html

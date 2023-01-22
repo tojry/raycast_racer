@@ -56,9 +56,6 @@ Symboles acceptés :
 
 **Important** : la route doit toujours faire exactement **2 cases** de largeur. (les obstacles peuvent circuler sur les 2 voies).
 
-<div style="width:400px ; height:400px">
 ![Menu](title.png)
-</div>
-<div style="width:400px ; height:400px">
+
 ![Jeu](race.png)
-</div>
